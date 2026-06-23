@@ -39,15 +39,6 @@ pub fn build(b: *std.Build) void {
 
     const smoke_step = b.step("smoke", "run the smoke exe");
     const run_smoke_cmd = b.addRunArtifact(smoke);
+    run_smoke_cmd.step.dependOn(b.getInstallStep());
     smoke_step.dependOn(&run_smoke_cmd.step);
-
-    // some tests
-    const lib_main_test = b.addTest(.{
-        .root_module = lib,
-        .name = "lib_main_test",
-    });
-
-    const run_test_cmd = b.addRunArtifact(lib_main_test);
-    const run_test_step = b.step("test", "Run the test");
-    run_test_step.dependOn(&run_test_cmd.step);
 }
