@@ -2,4 +2,6 @@
 
 #include <stdio.h>
 
-void foo() { printf("from czmime\n"); }
+void foo() {
+    printf("from czmime\n");
+}
