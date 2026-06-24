@@ -29,7 +29,7 @@ To use this library in your project just do
 ### Getting LibZMIME
 
 ```
-zig fetch --save https://codeberg.org/Adwaith-Rajesh/libzmime/archive/v0.1.0.tar.gz
+zig fetch --save git+https://codeberg.org/Adwaith-Rajesh/libzmime.git
 ```
 
 ### Build.Zig
